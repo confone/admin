@@ -1,0 +1,29 @@
+<?php
+// Database sharding configuration 
+//
+if (!isset($dbconfig)) {
+	$dbconfig = array();
+}
+
+$dbconfig['admin_administrator'] =
+	array (
+		'total_shards' => 1,
+		'shards_digit' => 1,
+		'username' => 'accountuser',
+		'password' => 'password',
+		'server_list' => array (
+			'localhost' => array('min'=>0, 'max'=>0)
+		) 
+	);
+
+$dbconfig['admin_permission'] =
+	array (
+		'total_shards' => 1,
+		'shards_digit' => 1,
+		'username' => 'accountuser',
+		'password' => 'password',
+		'server_list' => array (
+			'localhost' => array('min'=>0, 'max'=>0)
+		) 
+	);
+?>
