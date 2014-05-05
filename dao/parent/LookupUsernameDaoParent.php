@@ -1,5 +1,5 @@
 <?php
-abstract class UsernameLookupDaoParent extends AccountDaoBase {
+abstract class LookupUsernameDaoParent extends AdminDaoBase {
 
     protected function init() {
         $this->var['id'] = '';
@@ -44,7 +44,7 @@ abstract class UsernameLookupDaoParent extends AccountDaoBase {
 // ======================================================================================== override
 
     public function getTableName() {
-        return 'username_lookup';
+        return 'lookup_username';
     }
 
     protected function getIdColumnName() {

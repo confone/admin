@@ -1,5 +1,5 @@
 <?php
-abstract class PermissionUrlsDaoParent extends AccountDaoBase {
+abstract class PermissionUrlsDaoParent extends AdminDaoBase {
 
     protected function init() {
         $this->var['id'] = '';

@@ -13,7 +13,7 @@ CREATE TABLE {$dbName}.administrator
 ) ENGINE=InnoDB DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 
 
-CREATE TABLE {$dbName}.username_lookup
+CREATE TABLE {$dbName}.lookup_username
 (
 	id INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
 	username VARCHAR(33),
@@ -23,8 +23,8 @@ CREATE TABLE {$dbName}.username_lookup
 	PRIMARY KEY (id)
 ) ENGINE=InnoDB DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 
-CREATE INDEX {$dbName}_username_lookup_username_index ON {$dbName}.username_lookup (username(32));
-CREATE INDEX {$dbName}_username_lookup_is_active_index ON {$dbName}.username_lookup (is_active(1));
+CREATE INDEX {$dbName}_lookup_username_username_index ON {$dbName}.lookup_username (username(32));
+CREATE INDEX {$dbName}_lookup_username_is_active_index ON {$dbName}.lookup_username (is_active(1));
 
 
 GRANT ALL ON {$dbName}.* TO '{$uname}'@'%' IDENTIFIED BY '{$passwd}';
