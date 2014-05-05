@@ -18,8 +18,7 @@ $autoload_dirs = array( '../util',
 						'../dao',
 						'../dao/parent',
 						'controller',
-						'model',
-						'controller',
+						'controller/account',
 						'model');
 
 
